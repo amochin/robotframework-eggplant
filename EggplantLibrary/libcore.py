@@ -2,10 +2,17 @@ from datetime import datetime
 import inspect
 import xmlrpc.client
 import os
-from PIL import Image, ImageDraw
 
 import robot.api.logger as log
 from robot.libraries.BuiltIn import BuiltIn
+
+draw_rects_on_screenshots = True
+try:
+    from PIL import Image, ImageDraw
+except ModuleNotFoundError as e:
+    log.warn(f"Pillow not found, drawing rectangles on screenshots is disabled: {e}."    
+    " Install using: 'pip install Pillow'.")
+    draw_rects_on_screenshots = False
 
 from . import utils
 
@@ -660,8 +667,12 @@ class EggplantLibDynamicCore:
 
         return target_path
 
-    def draw_rect_on_image(self, image_file, coordinates, color='red'):
+    def draw_rect_on_image(self, image_file, coordinates, color='red'):        
         log.debug("Draw a {} rectangle with coordinates {} for image {}".format(color, coordinates, image_file))
+        
+        if not draw_rects_on_screenshots:
+            log.debug("Drawing rectangles disabled, check if Pillow is installed")
+            return
 
         coord_str = str(coordinates)
         coord_str = coord_str.replace("(", "")
