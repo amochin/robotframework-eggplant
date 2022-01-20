@@ -1,0 +1,16 @@
+﻿(*
+Reads current text from Windows Notepad and compares with the *expectedText*.
+
+_Parameters:_
+    - *expectedText* - expected value to compare with
+
+Tags: regression, smoke
+*)
+
+params expectedText
+
+put expectedText into expected
+If expected="" then put "Hello World" into expected
+
+put getNotepadText() into actual
+assert that actual=expected

@@ -1,0 +1,4 @@
+.DS_Store
+.timestamp
+*.suite/Results/
+/Results/

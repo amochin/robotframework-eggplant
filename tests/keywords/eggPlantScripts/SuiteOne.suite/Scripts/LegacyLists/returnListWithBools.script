@@ -1,0 +1,5 @@
+﻿set my_bool to true
+set my_list_with_bool to [false, my_bool, FALSE]
+Return my_list_with_bool
+
+

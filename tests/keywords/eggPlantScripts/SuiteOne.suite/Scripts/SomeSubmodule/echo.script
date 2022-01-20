@@ -1,0 +1,3 @@
+﻿// Returns the argument
+params input_value
+Return input_value

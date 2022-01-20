@@ -1,0 +1,5 @@
+﻿(**DEPRECATED!* - use `listParams` instead
+
+This keyword is deprecated - so RF log should contain a warning about it
+*)
+log "hello world"

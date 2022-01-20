@@ -1,0 +1,13 @@
+﻿Params Var1
+
+put Var1 into res
+put return after res
+put "New line" after res
+
+Return res
+
+
+
+
+
+

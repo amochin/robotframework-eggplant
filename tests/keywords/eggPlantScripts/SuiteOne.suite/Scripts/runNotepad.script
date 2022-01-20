@@ -1,0 +1,6 @@
+﻿(*Some docs in one line but with multiline syntax*)
+
+TypeText WindowsKey, r
+TypeText "notepad"
+TypeText enterKey
+WaitFor 10, "notepadTextArea_empty"

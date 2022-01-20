@@ -1,0 +1,12 @@
+﻿# Closes notepad window with text 'Hello World'
+Click "notepadTextArea_withText"
+TypeText altKey, F4
+TypeText rightArrow
+TypeText enterKey
+repeat while ImageFound("notepadTextArea_withText")
+	if repeatIndex() is 10 then
+		logError "Notepad image did not go away"
+		exit repeat
+	end if
+	wait 1 -- this line is optional
+end repeat

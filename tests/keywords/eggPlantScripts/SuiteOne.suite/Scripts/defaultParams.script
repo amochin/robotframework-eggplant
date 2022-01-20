@@ -1,0 +1,6 @@
+﻿# Testing new default arguments option
+params positional_arg_no_default, arg_int:123, arg_bool:True, arg_string:"hello", arg_string_with_space:"hello world"
+
+set return_list to [positional_arg_no_default, arg_int, arg_bool, arg_string, arg_string_with_space]
+log return_list
+return return_list

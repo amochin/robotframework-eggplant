@@ -1,0 +1,3 @@
+﻿put "single_value" into some_text
+put each line of some_text into return_list
+Return return_list

@@ -1,0 +1,10 @@
+﻿
+
+insert (33,34) nested after Testliste
+insert ("bla","bla") nested after Testliste
+
+set Rect to (100,200,300,400)
+
+Return (46464664,True, 4.4,"12:00:00", Rect,Testliste)
+
+

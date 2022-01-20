@@ -1,0 +1,7 @@
+﻿//Looks for a specified text using OCR and performs a mouse click. 
+//The optional parameter 'searchRect' defines the search rectangle. The full screen is used by default
+
+params textToSearch, searchRect
+
+if searchRect = "" then put  RemoteScreenRectangle() into searchRect
+Click(text: textToSearch, SearchRectangle: searchRect, waitFor:1)

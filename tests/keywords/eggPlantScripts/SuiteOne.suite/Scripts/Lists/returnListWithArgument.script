@@ -1,0 +1,4 @@
+﻿# Returns a simple list with the argument inside - as a third value
+# Return [1,2,my_value,4]
+params my_value
+Return [1,2,my_value,4]
