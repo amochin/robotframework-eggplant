@@ -241,7 +241,7 @@ In case of failed execution the library takes a SUT **screenshot automatically**
 The library can be used in VS Code with the
 [Robot Framework Language Server extension](https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp) with most of the features supported (code completion for keywords, go to keyword source, test case run directly from VS Code etc.), but it requires some **additional setup**.
 
-VS Code does not process import parameters of the library - i.e. all necessary initialization options of the can't be set in a usual way.  
+VS Code does not process import parameters of the library - i.e. all necessary initialization options can't be set in a usual way.  
 As a workaround, you can use the [config file](#config-file-example) to specify library parameters.
 
 - You don't have to change the existing library import with parameters in RF test suite files -
