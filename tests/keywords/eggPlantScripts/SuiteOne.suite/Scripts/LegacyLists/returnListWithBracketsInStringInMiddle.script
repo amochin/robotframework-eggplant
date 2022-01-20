@@ -1,0 +1,5 @@
+﻿params stringWithBrackets
+
+set sString to "Au (Sieg) - Düren Pbf"
+
+Return (1234, stringWithBrackets, "ABC")

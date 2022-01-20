@@ -1,0 +1,9 @@
+﻿(* multiline 1
+multiline inside
+*)
+# one more comment single line after multiline
+// and one more with different start character
+params arg1, arg2, arg3
+put arg1
+put arg2
+put arg3

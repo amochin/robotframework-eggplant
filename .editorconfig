@@ -1,0 +1,10 @@
+root = true
+
+[*.{robot, resource}]
+indent_style = space
+indent_size = 4
+
+# 4 spaces instead of tabs for Python
+[*.py]
+indent_style = space
+indent_size = 4

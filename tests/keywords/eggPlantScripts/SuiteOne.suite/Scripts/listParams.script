@@ -1,0 +1,7 @@
+﻿(*
+This script prints a list of params and prints every item of it
+*)
+params myList
+put item 1 of myList
+put item 2 of myList
+put item 3 of myList

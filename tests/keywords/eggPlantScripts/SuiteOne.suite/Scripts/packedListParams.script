@@ -1,0 +1,23 @@
+Params Var1, Var2, Var3, Var4
+
+Log
+Log "Anzahl:" && the number of items in Var3
+
+
+If Var1 is empty
+	Logerror "Parameter Var1 leer."
+end if
+
+If Var2 is empty
+	Logerror "Parameter Var2 leer."
+end if
+
+If Var3 is empty
+	Logerror "Parameter Var3 leer."
+end if
+
+If Var4 is empty
+	Logerror "Parameter" && Var4 && "leer."
+end if
+
+Return [Var1, Var2, Var3,Var4]

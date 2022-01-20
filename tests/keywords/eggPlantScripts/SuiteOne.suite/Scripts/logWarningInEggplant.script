@@ -1,0 +1,4 @@
+﻿//Logs a given parameter value as a waning message
+params logMessage
+
+LogWarning logMessage

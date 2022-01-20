@@ -1,0 +1,6 @@
+﻿// these are docs
+// another single line
+# single line with different character
+-- and one more
+put ReadText("notepadTextArea_withText") into s
+Return s

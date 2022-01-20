@@ -1,0 +1,3 @@
+﻿params stringWithBrackets
+
+Return [1234, stringWithBrackets]

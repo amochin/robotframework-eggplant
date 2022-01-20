@@ -1,0 +1,2 @@
+//This is an internal script - it must not be treated by the Library as a keyword
+Return "hello world"
