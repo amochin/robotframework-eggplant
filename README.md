@@ -11,9 +11,6 @@ The eggPlant itself should be launched in eggDrive mode from outside -
 see the scripts `start_eggPlant.bat` and `stop_eggPlant.bat` for example.
 
 ![Architecture picture](Architecture.png)
-
-See the `logs_example` folder for sample logs of a test run.
-
 ## Quick start
 
 ### System requirements
@@ -181,8 +178,6 @@ You can use _libdoc_ to build the keyword documentation file:
   ```shell
     libdoc EggplantLibrary::../tests/keywords/eggPlantScripts/SuiteOne.suite docs_example_with_eggplant_scripts.html
   ```
-
-See also the `docs_example` folder.
 
 ### Keywords accept arguments
 
