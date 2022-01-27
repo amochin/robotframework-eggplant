@@ -108,7 +108,7 @@ class EggplantLibrary(EggplantLibDynamicCore):
         return result
 
     @keyword
-    def open_session(self, suite=None, close_previously_open_session=True):
+    def open_session(self, suite='', close_previously_open_session=True):
         """
         Opens a session with the specified eggPlant Suite.
         Has to be called before test execution.
@@ -121,7 +121,7 @@ class EggplantLibrary(EggplantLibDynamicCore):
         This can be disabled using the `close_previously_open_session` parameter.
         """
         s = suite
-        if s is None:
+        if not suite:
             s = self.eggplant_suite
         log.debug("Open the eggPlant session with the test suite: {}".format(s))
         try:
@@ -146,7 +146,7 @@ class EggplantLibrary(EggplantLibDynamicCore):
             self.eggplant_version_checked = True
 
     @keyword
-    def close_session(self, suite=None):
+    def close_session(self, suite=''):
         """
         Closes the session with the specified eggPlant Suite.
         Has to be called after test execution before opening a new session with the same eggPlant Suite.
@@ -156,7 +156,7 @@ class EggplantLibrary(EggplantLibDynamicCore):
         If not specified, the last open suite is taken.
         """
         s = suite
-        if s is None:
+        if not suite:
             s = self.eggplant_suite
         log.debug("Close the eggPlant session with the test suite: {}".format(s))
         try:
@@ -170,7 +170,7 @@ class EggplantLibrary(EggplantLibDynamicCore):
             log.info("Fault code:{}. Fault string: {}".format(e.faultCode, e.faultString))
 
     @keyword
-    def start_movie(self, file_path=None, fps=15, compression_rate=1, highlighting=True, extra_time=5):
+    def start_movie(self, file_path='', fps=15, compression_rate=1, highlighting=True, extra_time=5):
         """
         Starts video recording into the specified file and returns the absolute path to it.
         

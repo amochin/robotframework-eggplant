@@ -11,6 +11,11 @@ Start and stop movie manually
 	Start movie
 	Check Input In Notepad    Hello World
 
+Start movie with options
+    [Documentation]    If optional arguments passed, default file path should be used properly
+    ${path}=    Start Movie    compression_rate=0.3    
+    Should Contain    ${path}    Movie    msg=No valid movie file path returned!
+
 Embedded movie in case of errors
 	[Documentation]  Expand the expectedly failed keyword to check the embedded video
 	Start movie
