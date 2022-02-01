@@ -11,6 +11,13 @@ The eggPlant itself should be launched in eggDrive mode from outside -
 see the scripts `start_eggPlant.bat` and `stop_eggPlant.bat` for example.
 
 ![Architecture picture](Architecture.png)
+
+- [Quick Start](#quick-start)
+- [eggPlant compatibility](#eggplant-compatibility)
+- [Importing library](#importing-library)
+- [Keywords](#keywords)
+- [Library usage in VS Code](#library-usage-in-vs-code)
+- [Running self-tests](#running-self-tests)
 ## Quick start
 
 ### System requirements
