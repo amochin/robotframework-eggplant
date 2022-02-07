@@ -133,9 +133,13 @@ class EggplantLibrary(EggplantLibDynamicCore):
                     log.info("Old session busy - close it automatically")
                     self.close_session()                    
                     out = self.eggplant_server.startsession(s)
-                    log.debug(out)
+                    log.debug(out)            
             else:
                 raise e
+        
+        except ConnectionRefusedError as e:
+            log.info(f"ConnectionRefusedError - {e}")
+            raise Exception("Failed connecting to eggPlant - check it's running in eggDrive mode")
 
         # check eggplant version compatibility first - but only once
         if not self.eggplant_version_checked:
@@ -163,11 +167,14 @@ class EggplantLibrary(EggplantLibDynamicCore):
             out = self.eggplant_server.endsession(s)
             log.debug(out)
         except xmlrpc.client.Fault as e:
+            log.info("Fault code:{}. Fault string: {}".format(e.faultCode, e.faultString))
             if "Can't End Session -- No Session is Active" in e.faultString:
                 log.warn("No open eggPlant session to close!")
             else:
-                log.error("Fault occurred!")
-            log.info("Fault code:{}. Fault string: {}".format(e.faultCode, e.faultString))
+                raise e
+        except ConnectionRefusedError as e:
+            log.info(f"ConnectionRefusedError - {e}")
+            raise Exception("Failed connecting to eggPlant - check it's running in eggDrive mode")
 
     @keyword
     def start_movie(self, file_path='', fps=15, compression_rate=1, highlighting=True, extra_time=5):
