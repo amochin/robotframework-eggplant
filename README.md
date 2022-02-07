@@ -243,15 +243,22 @@ In case of failed execution the library takes a SUT **screenshot automatically**
 The library can be used in VS Code with the
 [Robot Framework Language Server extension](https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp) with most of the features supported (code completion for keywords, go to keyword source, test case run directly from VS Code etc.), but it requires some **additional setup**.
 
-VS Code does not process import parameters of the library - i.e. all necessary initialization options can't be set in a usual way.  
-As a workaround, you can use the [config file](#config-file-example) to specify library parameters.
-
-- You don't have to change the existing library import with parameters in RF test suite files -
+By default the Language Server Plugin for VS Code does not process import parameters of the library - i.e. all necessary initialization options can't be set in a usual way.  
+You can solve it in one of the following ways:
+1. Enable processing library import arguments in the [Language Server Plugin configuration](https://github.com/robocorp/robotframework-lsp/blob/master/robotframework-ls/docs/config.md)
+    ```
+    //put this line into 'settings.json'
+    "robot.libraries.libdoc.needsArgs": ["EggplantLibrary"]
+    ```
+2. Alternatively you can use the [config file](#config-file-example) to specify library parameters.
+    - You don't have to change the existing library import with parameters in RF test suite files -
    VS code processes the import, but ignores the parameters.
-- Direct library import parameters in RF files always have a higher pirority than config file values.
-- You may use only some of import parameters - both in RF files and in a config file.  
-- There is no need to reload VS Code after adding or changing eggplant script files - the Language Server extension should detect the changes and update the keyword names for code completion automatically.
-- Note that importing library directly as a python file via path doesn't work for VS Code -
+    - Direct library import parameters in RF files always have a higher pirority than config file values.
+    - You may use only some of import parameters - both in RF files and in a config file.  
+    - There is no need to reload VS Code after adding or changing eggplant script files - the Language Server extension should detect the changes and update the keyword names for code completion automatically.
+
+
+Note that importing library directly as a python file via path doesn't work for VS Code -
 instead you should use module name with the correct `robot.pythonpath` in the Language Server extension settings.  
 It shouldn't be a problem when installing library as a normal user,
 but might be necessary for library development and maintenance.
