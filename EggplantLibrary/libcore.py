@@ -322,9 +322,9 @@ class EggplantLibDynamicCore:
             if name in ['__init__', '__intro__']:  # standard RF library specification, needed e.g. in RED
                 method = getattr(self, name, False)
                 if method:
-                    result = os.path.abspath(inspect.getsourcefile(method))
+                    result = os.path.abspath(inspect.getsourcefile(method)) + ":1"
             else:
-                result = self.get_script_file_path(name)
+                result = self.get_script_file_path(name) + ":1"
 
         return result
 
