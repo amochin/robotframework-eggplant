@@ -21,6 +21,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/amochin/robotframework-eggplant",
+    license = 'Apache License 2.0',
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
