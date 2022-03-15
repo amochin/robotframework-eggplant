@@ -255,7 +255,9 @@ You can solve it in one of the following ways:
    VS code processes the import, but ignores the parameters.
     - Direct library import parameters in RF files always have a higher pirority than config file values.
     - You may use only some of import parameters - both in RF files and in a config file.  
-    - There is no need to reload VS Code after adding or changing eggplant script files - the Language Server extension should detect the changes and update the keyword names for code completion automatically.
+
+There is no need to reload VS Code after adding or changing eggplant script files - the Language Server extension should detect the changes and update the keyword names for code completion automatically.     
+If you're having issues with it, try to regenerate the library specification files - just delete the `EggplantLibrary<...>.libspec` and `EggplantLibrary<...>.libspec.m` files in the LanguageServer specs folder - usually located somewhere in `<user_profile>/.robotframework-ls/specs/<...>/user`.
 
 
 Note that importing library directly as a python file via path doesn't work for VS Code -
