@@ -172,18 +172,10 @@ The library also contains several built in keywords (independent from actually a
 
 ### Creating keyword documentation
 
-You can use _libdoc_ to build the keyword documentation file:
-
-- Static keywords only
+You can use _libdoc_ to build the keyword documentation file. This will include eggPlant scripts and static keywords as well:
 
   ```shell
-    libdoc EggplantLibrary docs_static_keywords.html
-  ```
-
-- All keywords - including eggPlant scripts and static keywords as well
-
-  ```shell
-    libdoc EggplantLibrary::../tests/keywords/eggPlantScripts/SuiteOne.suite docs_example_with_eggplant_scripts.html
+    libdoc EggplantLibrary::<Full path to eggplant suite> keywords_docs.html
   ```
 
 ### Keywords accept arguments
