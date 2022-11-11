@@ -12,6 +12,10 @@ see the scripts `start_eggPlant.bat` and `stop_eggPlant.bat` for example.
 
 ![Architecture picture](Architecture.png)
 
+Watch my talk from [Robocon 2022](https://youtu.be/wOGVdWEzs_A)!
+
+[![Eggplant Library presentation at RoboCon 2022](http://img.youtube.com/vi/wOGVdWEzs_A/0.jpg)](https://youtu.be/wOGVdWEzs_A "Eggplant Library presentation at RoboCon 2022")
+
 - [Quick Start](#quick-start)
 - [eggPlant compatibility](#eggplant-compatibility)
 - [Importing library](#importing-library)
