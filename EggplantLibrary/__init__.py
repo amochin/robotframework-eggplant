@@ -23,7 +23,7 @@ class EggplantLibrary(EggplantLibDynamicCore):
     See the [https://github.com/amochin/robotframework-eggplant|Eggplant Library homepage] for more information.
     """
     ROBOT_LIBRARY_VERSION = VERSION
-    ROBOT_LIBRARY_SCOPE = 'TEST SUITE'
+    ROBOT_LIBRARY_SCOPE = 'SUITE'
 
     # ---------- static keywords ------------------------------
     @keyword

@@ -27,6 +27,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "Operating System :: Microsoft :: Windows",
         "License :: OSI Approved :: Apache Software License",
+        "Framework :: Robot Framework :: Library",
     ],
     install_requires=[
         'robotframework',
